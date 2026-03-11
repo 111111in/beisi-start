@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录 - beisi-start</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div class="brand-text">
+              <h1>登录</h1>
+            </div>
+          </div>
+        </header>
+
+        <form id="loginForm" class="form" autocomplete="on">
+          <label class="field">
+            <span class="label">用户名</span>
+            <input id="username" name="username" type="text" placeholder="请输入用户名" required />
+          </label>
+
+          <label class="field">
+            <span class="label">密码</span>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="请输入密码"
+              required
+              minlength="1"
+            />
+          </label>
+
+          <div id="hint" class="hint" role="status" aria-live="polite"></div>
+
+          <button id="submitBtn" class="btn" type="submit">登录</button>
+        </form>
+
+        <section id="welcome" class="welcome hidden">
+          <div class="welcome-title" id="welcomeText">欢迎</div>
+          <div class="actions">
+            <button id="logoutBtn" class="btn btn-secondary" type="button">退出登录</button>
+          </div>
+          <div class="welcome-note muted">提示：出于安全考虑，Token 不在页面明文展示。</div>
+        </section>
+      </section>
+
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
